@@ -6,4 +6,13 @@
 {% block content %}
 <h1>Discpling for Development by Atomic and Irene.</h1>
 
+{% if user.is_authenticated %}
+
+<p>Welcome {{user.email}}!</p>
+
+{% else %}
+<p>You are not logged in</p>
+
+{% endif %}
+
 {% endblock content %}
