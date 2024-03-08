@@ -177,7 +177,9 @@ ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_UNIQUE_EMAIL = True
 
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-# DEFAULT_FROM_EMAIL = "admin@alindabookstore.com"
+
+
+# DEFAULT_FROM_EMAIL = "admin@atomicministries.com"
 DEFAULT_FROM_EMAIL = "alindafortunate5@gmail.com"
 EMAIL_HOST = "smtp.sendgrid.net"
 EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER")
