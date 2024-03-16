@@ -1,0 +1,30 @@
+<!-- templates/aboutus/aboutpage_list.html-->
+{% extends "_base.html" %}
+
+{% block title %}About{% endblock title %}
+
+{% block content %}
+<div class=".container">
+    <h1>About Us</h1>
+    {% for aboutpage_list in aboutpage_list %}
+    <div>
+        <h2>Vision</h2>{{aboutpage_list.vision}}
+    </div>
+    <div>
+        <h2>Mission</h2>{{aboutpage_list.mission}}
+    </div>
+    <div>
+        <h2>Core Values</h2>
+        <ol>
+            {% for corevalues in aboutpage_list.values.all %}
+            <li>{{corevalues.values}}</li>
+            {% endfor %}
+        </ol>
+
+
+    </div>
+</div>
+
+{% endfor %}
+
+{% endblock content %}
