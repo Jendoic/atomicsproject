@@ -33,4 +33,5 @@ urlpatterns = [
     # Local apps
     path("", include("pages.urls")),
     path("aboutus/", include("aboutus.urls")),
+    path("contactus/", include("contactus.urls")),
 ]

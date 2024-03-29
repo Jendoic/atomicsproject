@@ -1,9 +1,21 @@
 /* static/css/base.css*/
 body {
+
+    font-family: "Source Sans 3", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
     min-height: 75rem;
     padding-top: 4.5rem;
+
 }
 
 h1 {
     color: red;
+}
+
+.custom-message-field {
+    height: 0.50px;
+    width: 10px;
+    /* Adjust the height as needed */
 }

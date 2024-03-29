@@ -1,0 +1,49 @@
+<!-- templates/contactus/contact.html-->
+{% extends "_base.html" %}
+
+{%load crispy_forms_tags%}
+
+{% block title %}Contact Us{% endblock title %}
+
+{% block content %}
+<h1>Contact Page</h1>
+
+<form action="" method="post">
+    {% csrf_token %}
+
+    <div>
+        <br>
+        <!-- Display dynamic fields -->
+        <label>Organisation Email:</label>
+        {{ organisation_email }}
+        <br>
+        <label>Telephone Contact:</label>
+        {{ organisation_contact }}
+        <br>
+        <label>Location:</label>
+        {{ location }}
+        <br>
+    </div>
+
+    <div class="form-group">
+        <label for="{{ form.firstname.id_for_label }}"></label>
+        {{ form.firstname|as_crispy_field }}
+    </div>
+    <div class="form-group">
+        <label for="{{ form.lastname.id_for_label }}"></label>
+        {{ form.lastname|as_crispy_field }}
+    </div>
+    <div class="custom-message-field" he>
+        <label for="{{ form.message.id_for_label }}"></label>
+        {{ form.message|as_crispy_field }}
+    </div>
+
+
+    <button class="btn btn-success" type="submit">Send Message</button>
+</form>
+
+<!--<h1>Get in touch with us</h1>
+<p>Our Email: {{contactpage.email}}</p>
+<p>Our Contact:{{contactpage.telephone}}</p>
+<p>Our Location:{{contactpage.location}}</p>-->
+{% endblock content %}
