@@ -101,7 +101,14 @@ WSGI_APPLICATION = "atomic_disciple_making_ministry.wsgi.application"
 }"""
 
 # Connection to Render Database
-DATABASES = {"default": dj_database_url.parse(os.environ.get("DATABASE_URL"))}
+# DATABASES = {"default": dj_database_url.parse(os.environ.get("DATABASE_URL"))}
+"""DATABASES = {
+    "default": dj_database_url.config(
+        # Replace this value with your local database's connection string.
+        default="postgresql://postgres:postgres@localhost:5432/atomic_disciple_making_ministry",
+        conn_max_age=600,
+    )
+}"""
 # Postgress Database connection.
 """DATABASES = {
     "default": {
@@ -113,6 +120,16 @@ DATABASES = {"default": dj_database_url.parse(os.environ.get("DATABASE_URL"))}
         "PORT": os.environ.get("DATABASE_PORT"),
     }
 }"""
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "atomicdatabase",
+        "USER": "atomicdatabase_user",
+        "PASSWORD": "i6uomqWi0mINRyT7KUL169ZngWHLaYcF",
+        "HOST": "dpg-co7aduun7f5s738jfdng-a",
+        "PORT": 5432,
+    }
+}
 
 
 # Password validation
