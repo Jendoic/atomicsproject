@@ -33,15 +33,13 @@
         <label for="{{ form.lastname.id_for_label }}"></label>
         {{ form.lastname|as_crispy_field }}
     </div>
-    <div class="custom-message-field" he>
+    <div class="form-group">
         <label for="{{ form.message.id_for_label }}"></label>
         {{ form.message|as_crispy_field }}
     </div>
 
-
     <button class="btn btn-success" type="submit">Send Message</button>
 </form>
-
 <!--<h1>Get in touch with us</h1>
 <p>Our Email: {{contactpage.email}}</p>
 <p>Our Contact:{{contactpage.telephone}}</p>

@@ -14,6 +14,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
         rel="stylesheet">
+    <!-- fontawesome-->
+    <!--
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="f98ca7baf4" crossorigin="anonymous" />-->
+
+    <script src="https://kit.fontawesome.com/f98ca7baf4.js" crossorigin="anonymous"></script>
+
+
 
     <!-- Bootstrap CSS -->
     <!-- Latest compiled and minified CSS -->
@@ -25,15 +33,33 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-sm navbar-dark  fixed-top  custom-navbar text-dark">
         <div class="container">
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link active" href="{% url 'home' %}">Home</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'aboutpage_list' %}">About</a>
-                </li>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                About
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                                <li><a class="dropdown-item" href="{% url 'aboutpage_list' %}">About Us</a></li>
+                                <li><a class="dropdown-item" href="{% url 'staffpage' %}">Our Staff</a></li>
+
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'contact' %}">Contact US</a>
                 </li>
@@ -53,11 +79,17 @@
         </div>
     </nav>
 
+
+
     <div class="container">
         {% block content %}
 
         {% endblock content %}
+
+        {% include "footer.html" %}
     </div>
+
+
     <!-- Latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- JavaScript-->

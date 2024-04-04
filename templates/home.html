@@ -18,11 +18,15 @@
             <a href="{% url 'account_login' %}">Log In</a>
             {% endif %}
         </div>
-        <h2>{{homepage.subtitle}}</h2>
-        <p>{{homepage.body}}</p>
-        <p> <b>Discipleship:</b>{{homepage.discipleship}}</p>
-        <p><b>Development:</b>{{homepage.development}}</p>
-        <p><b>Philosophy:</b>{{homepage.philosophy}}</p>
+        <section>
+            <h2>{{homepage.subtitle}}</h2>
+            <p>{{homepage.body}}</p>
+        </section>
+        <section>
+            <p> <b>Discipleship:</b>{{homepage.discipleship}}</p>
+            <p><b>Development:</b>{{homepage.development}}</p>
+            <p><b>Philosophy:</b>{{homepage.philosophy}}</p>
+        </section>
     </div>
     {% endfor %}
 </div>

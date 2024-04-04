@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import AboutPage, CoreValue
+from .models import AboutPage, CoreValue, MyPhotos
 
 
 # Register your models here.
@@ -18,3 +18,4 @@ class AboutPageAdmin(admin.ModelAdmin):
 
 
 admin.site.register(AboutPage, AboutPageAdmin)
+admin.site.register(MyPhotos)

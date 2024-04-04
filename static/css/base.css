@@ -11,11 +11,103 @@ body {
 }
 
 h1 {
+    text-align: center;
     color: red;
 }
 
-.custom-message-field {
-    height: 0.50px;
-    width: 10px;
-    /* Adjust the height as needed */
+/* Styling for the navbar */
+.custom-navbar {
+    background-color: #f356c7;
+    color: black;
+
+    .nav-link {
+        color: #000000 !important;
+        /* Override default white color */
+    }
+
+}
+
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* Adjust as needed */
+}
+
+.team-member {
+    text-align: center;
+    margin: 1rem;
+    /* Adjust spacing */
+    width: calc(25% - 2rem);
+    /* Adjust for responsive layout */
+}
+
+.team-member img {
+    width: 200px;
+    height: 200px;
+    /* Adjust image size */
+    border-radius: 50%;
+
+}
+
+.team-member h4 {
+    margin-top: 1rem;
+    /* Adjust spacing */
+}
+
+/* Style the footer */
+.footer-section {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #777;
+    color: white;
+
+}
+
+.footerInformation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* Adjust as needed */
+}
+
+.footerInformations a {
+    text-decoration: none;
+    color: white;
+}
+
+.footerInformations {
+    margin: 1rem;
+    /* Adjust spacing */
+    width: calc(33% - 2rem);
+    /* Adjust for responsive layout */
+}
+
+/* Footer by Gemini*/
+.site-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.social-icons {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.social-icons li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-icon {
+    color: inherit;
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+    color: #ddd;
 }

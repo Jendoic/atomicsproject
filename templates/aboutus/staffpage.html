@@ -1,0 +1,22 @@
+<!-- templates/aboutus/staffpage.html-->
+{% extends "_base.html" %}
+{% load static %}
+
+{% block title %}Our Staff{% endblock title %}
+
+{% block content %}
+<div class="container">
+    <h1>Meet The Team</h1>
+    <section class="team-members">
+        {% for staffpage in staffpages %}
+        <article class="team-member">
+            <img class="roundedimage" src="{{ staffpage.photo.url }}" alt="{{ staffpage.names }}">
+            <h4>{{staffpage.name}}</h4>
+            <p>{{staffpage.position}}</p>
+        </article>
+        {% endfor %}
+    </section>
+
+
+</div>
+{% endblock content%}

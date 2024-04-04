@@ -22,6 +22,15 @@ class AboutPage(models.Model):
         return reverse("aboutpage_detail", args=[str(self.id)])
 
 
+class MyPhotos(models.Model):
+    photo = models.ImageField(upload_to="staffPhotos/", blank=True)
+    name = models.CharField(max_length=30, blank=True)
+    position = models.CharField(max_length=40, blank=True)
+
+    def __str__(self):
+        return self.name
+
+
 class CoreValue(models.Model):
     aboutpage = models.ForeignKey(
         AboutPage,
