@@ -100,8 +100,10 @@ WSGI_APPLICATION = "atomic_disciple_making_ministry.wsgi.application"
     }
 }"""
 
+# Connection to Render Database
+DATABASES = {"default": dj_database_url.parse(os.environ.get("DATABASE_URL"))}
 # Postgress Database connection.
-DATABASES = {
+"""DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
         "NAME": os.environ.get("DATABASE_NAME"),
@@ -111,7 +113,7 @@ DATABASES = {
         "PORT": os.environ.get("DATABASE_PORT"),
     }
 }
-
+"""
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
@@ -152,10 +154,10 @@ STATICFILES_DIRS = [BASE_DIR / "static"]
 STATIC_ROOT = BASE_DIR / "staticfiles"
 # This helps access file in django production development
 
-STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"
+# STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"
 
 # This helps access media files from the server.
-# STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
