@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get("DEBUG", False) == "True"
+DEBUG = os.environ.get("DEBUG", True) == "False"
 
 ALLOWED_HOSTS = ["*"]
 
@@ -112,8 +112,8 @@ DATABASES = {"default": dj_database_url.parse(os.environ.get("DATABASE_URL"))}
         "HOST": os.environ.get("DATABASE_HOST"),
         "PORT": os.environ.get("DATABASE_PORT"),
     }
-}
-"""
+}"""
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
