@@ -6,9 +6,9 @@
 
 {% block content %}
 <div class=".container">
-    {% for homepage in homepage_list %}
+    {% for landingpage in homepage_list %}
     <div>
-        <h1>{{homepage.title}}</h1>
+        <h1>{{landingpage.title}}</h1>
         <div>
 
             {% if user.is_authenticated %}
@@ -19,13 +19,13 @@
             {% endif %}
         </div>
         <section>
-            <h2>{{homepage.subtitle}}</h2>
-            <p>{{homepage.body}}</p>
+            <h2>{{landingpage.subtitle}}</h2>
+            <p>{{landingpage.body}}</p>
         </section>
         <section>
-            <p> <b>Discipleship:</b>{{homepage.discipleship}}</p>
-            <p><b>Development:</b>{{homepage.development}}</p>
-            <p><b>Philosophy:</b>{{homepage.philosophy}}</p>
+            <p> <b>Discipleship:</b>{{landingpage.discipleship}}</p>
+            <p><b>Development:</b>{{landingpage.development}}</p>
+            <p><b>Philosophy:</b>{{landingpage.philosophy}}</p>
         </section>
     </div>
     {% endfor %}

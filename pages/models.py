@@ -2,7 +2,7 @@ from django.db import models
 
 
 # Create your models here.
-class HomePage(models.Model):
+class LandingPage(models.Model):
     title = models.CharField()
     subtitle = models.TextField()
     body = models.TextField()

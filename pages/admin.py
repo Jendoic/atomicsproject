@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import HomePage
+from .models import LandingPage
 
 # Register your models here.
-admin.site.register(HomePage)
+admin.site.register(LandingPage)
